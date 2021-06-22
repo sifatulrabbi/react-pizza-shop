@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { FaPizzaSlice } from "react-icons/fa"
 
 export const Nav = styled.nav`
-   background: #aa1111;
+   background: transparent;
    display: flex;
    justify-content: center;
    font-weight: 700;
@@ -11,11 +11,12 @@ export const Nav = styled.nav`
 `
 export const NavLogo = styled(Link)`
    text-decoration: none;
-   font-size: 2rem;
+   font-size: 2.1rem;
    display: flex;
    align-items: center;
    cursor: pointer;
    color: #fff;
+   font-weight: inherit;
 
    @media screen and (max-width: 400px) {
       position: absolute;
@@ -29,15 +30,17 @@ export const NavMenu = styled.div`
    position: absolute;
    top: 0;
    right: 0;
-   cursor: pointer;
    color: #fff;
 
    p {
       transform: translate(-175%, 100%);
       font-weight: bold;
+      font-family: inherit;
+      cursor: pointer;
    }
 `
 export const Bars = styled(FaPizzaSlice)`
    font-size: 2rem;
    transform: translate(-50%, -15%);
+   cursor: pointer;
 `

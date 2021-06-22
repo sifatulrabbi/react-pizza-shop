@@ -4,7 +4,7 @@ import { Nav, NavLogo, NavMenu, Bars } from "./NavbarElements"
 const Navbar = () => {
    return (
       <Nav>
-         <NavLogo to="/">Navbar</NavLogo>
+         <NavLogo to="/">Pizza</NavLogo>
 
          <NavMenu>
             <p>Menu</p>

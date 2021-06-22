@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 16px;
       font-weight: 400;
       line-height: 1.7;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Kanit', sans-serif;
    }
 
    body {
