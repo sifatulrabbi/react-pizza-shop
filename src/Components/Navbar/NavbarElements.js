@@ -31,6 +31,7 @@ export const NavMenu = styled.div`
    top: 0;
    right: 0;
    color: #fff;
+   cursor: pointer;
 
    p {
       transform: translate(-175%, 100%);

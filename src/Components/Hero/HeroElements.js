@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import img from '../../images/pizza-3.jpg'
+import img from "../../images/pizza-3.jpg"
 
 const HeroContainer = styled.section`
-   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),  url(${img});
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${img});
    background-blend-mode: multiply;
    background-position: center;
    background-size: cover;
