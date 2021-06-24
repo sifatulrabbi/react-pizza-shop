@@ -84,7 +84,7 @@ export const SidebarRoute = styled(Link)`
    text-decoration: none;
 
    &:hover {
-      background: #fff;
-      color: #010606;
+      transform: translate(-5px, -5px);
+      box-shadow: 5px 5px #fff;
    }
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import img from "../../images/pizza-3.jpg"
+import img from "../../images/pizza-1.jpg"
 
 const HeroContainer = styled.section`
    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${img});
@@ -11,7 +11,9 @@ const HeroContainer = styled.section`
    .content {
       height: calc(100vh - 80px);
       max-height: 100%;
-      width: 100vw;
+      width: 100%;
+      max-width: 100vw;
+
       padding: 0 calc((100vw - 1300px) / 2);
 
       ul {
@@ -52,11 +54,11 @@ const HeroContainer = styled.section`
          background: #e31837;
          color: #fff;
          transition: 200ms ease-out;
+         cursor: pointer;
 
          &:hover {
-            background: #ffc500;
-            transition: 200ms ease-out;
-            cursor: pointer;
+            box-shadow: 5px 5px #ffc500;
+            transform: translate(-5px, -5px);
          }
       }
    }
