@@ -8,10 +8,10 @@ const Sidebar = ({ isOpen, toggle }) => {
             <CloseIcon />
          </Icon>
          <SidebarMenu>
-            <SidebarLink onClick={toggle} to="/">
+            <SidebarLink onClick={toggle} to="/pizzas">
                Pizzas
             </SidebarLink>
-            <SidebarLink onClick={toggle} to="/">
+            <SidebarLink onClick={toggle} to="/desserts">
                Desserts
             </SidebarLink>
             <SidebarLink onClick={toggle} to="/">

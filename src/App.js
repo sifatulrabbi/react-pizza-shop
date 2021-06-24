@@ -1,17 +1,35 @@
-import React from "react"
-import { Hero, Products, Featured, Footer } from "./Components"
+import React, { useState } from "react"
+import { Navbar, Sidebar, Hero, Products, Featured, Footer } from "./Components"
 import GlobalStyle from "./globalStyles"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { productData } from "./data"
+import HomePage from "./Pages/HomePage/HomePage"
+import Pizzas from "./Pages/Pizzas/Pizzas"
+import Desserts from "./Pages/Desserts/Desserts"
 
 function App() {
+   const [showSidebar, setShowSidebar] = useState(false)
+
+   const toggleSidebar = () => {
+      setShowSidebar(!showSidebar)
+   }
+
    return (
       <BrowserRouter>
          <GlobalStyle />
-         <Hero />
-         <Products data={productData.pizza_data} heading="Choose Your Favorites" />
-         <Featured data={productData.pizza_of_the_day} heading="Pizza of the Day" />
-         <Products data={productData.sweets} heading="Sweet Treats For You" />
+         <Navbar toggle={toggleSidebar} />
+         <Sidebar toggle={toggleSidebar} isOpen={showSidebar} />
+         <Switch>
+            <Route exact to="/">
+               <HomePage productData={productData} />
+            </Route>
+            <Route exact to="/pizzas">
+               <Pizzas productData={productData} />
+            </Route>
+            <Route exact to="/desserts">
+               <Desserts productData={productData} />
+            </Route>
+         </Switch>
          <Footer />
       </BrowserRouter>
    )

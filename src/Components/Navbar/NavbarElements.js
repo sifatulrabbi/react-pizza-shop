@@ -3,6 +3,10 @@ import { Link } from "react-router-dom"
 import { FaPizzaSlice } from "react-icons/fa"
 
 export const Nav = styled.nav`
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
    background: transparent;
    display: flex;
    justify-content: center;
