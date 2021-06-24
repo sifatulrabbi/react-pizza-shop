@@ -1,24 +1,19 @@
-import React, { useState } from "react"
+import React from "react"
 import { Navbar, Sidebar, Footer } from "./Components"
 import GlobalStyle from "./globalStyles"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { productData } from "./data"
-import HomePage from "./Pages/HomePage/HomePage"
-import Pizzas from "./Pages/Pizzas/Pizzas"
-import Desserts from "./Pages/Desserts/Desserts"
+import { HomePage, Pizzas, Desserts } from "./Pages"
+import useSidebar from "./Hooks/useSidebar"
 
 function App() {
-   const [showSidebar, setShowSidebar] = useState(false)
-
-   const toggleSidebar = () => {
-      setShowSidebar(!showSidebar)
-   }
+   const [show, setShow] = useSidebar(false)
 
    return (
       <Router>
          <GlobalStyle />
-         <Navbar toggle={toggleSidebar} />
-         <Sidebar toggle={toggleSidebar} isOpen={showSidebar} />
+         <Navbar toggle={setShow} />
+         <Sidebar toggle={setShow} isOpen={show} />
          <Switch>
             <Route exact path="/">
                <HomePage data={productData} />
