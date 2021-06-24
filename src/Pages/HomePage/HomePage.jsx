@@ -1,13 +1,13 @@
 import React from "react"
 import { Hero, Products, Featured } from "../../Components"
 
-const HomePage = ({ productData }) => {
+const HomePage = ({ data }) => {
    return (
       <>
          <Hero />
-         <Products data={productData.pizza_data} heading="Choose Your Favorites" />
-         <Featured data={productData.pizza_of_the_day} heading="Pizza of the Day" />
-         <Products data={productData.sweets} heading="Sweet Treats For You" />
+         <Products data={data.pizza_data} heading="Choose Your Favorites" />
+         <Featured data={data.pizza_of_the_day} heading="Pizza of the Day" />
+         <Products data={data.sweets} heading="Sweet Treats For You" />
       </>
    )
 }

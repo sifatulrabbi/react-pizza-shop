@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Navbar, Sidebar, Hero, Products, Featured, Footer } from "./Components"
+import { Navbar, Sidebar, Footer } from "./Components"
 import GlobalStyle from "./globalStyles"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { productData } from "./data"
 import HomePage from "./Pages/HomePage/HomePage"
 import Pizzas from "./Pages/Pizzas/Pizzas"
@@ -15,23 +15,23 @@ function App() {
    }
 
    return (
-      <BrowserRouter>
+      <Router>
          <GlobalStyle />
          <Navbar toggle={toggleSidebar} />
          <Sidebar toggle={toggleSidebar} isOpen={showSidebar} />
          <Switch>
-            <Route exact to="/">
-               <HomePage productData={productData} />
+            <Route exact path="/">
+               <HomePage data={productData} />
             </Route>
-            <Route exact to="/pizzas">
-               <Pizzas productData={productData} />
+            <Route exact path="/pizzas">
+               <Pizzas data={productData.pizza_data} />
             </Route>
-            <Route exact to="/desserts">
-               <Desserts productData={productData} />
+            <Route exact path="/desserts">
+               <Desserts data={productData.sweets} />
             </Route>
          </Switch>
          <Footer />
-      </BrowserRouter>
+      </Router>
    )
 }
 

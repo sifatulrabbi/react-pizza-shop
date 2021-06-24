@@ -10,6 +10,7 @@ const Products = ({ data, heading }) => {
             {data &&
                data.map((product, index) => (
                   <ProductCart
+                     key={index}
                      index={index}
                      img={product.img}
                      alt={product.alt}

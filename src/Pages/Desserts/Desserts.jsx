@@ -1,10 +1,11 @@
 import React from "react"
+import { Products } from "../../Components"
 
-const Desserts = () => {
+const Desserts = ({ data }) => {
    return (
-      <div>
-         <p>hello</p>
-      </div>
+      <>
+         <Products data={data} />
+      </>
    )
 }
 
